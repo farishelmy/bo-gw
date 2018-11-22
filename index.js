@@ -21,6 +21,13 @@ const batchLog=require('./routes/api/batchLog')
 const auditLog=require('./routes/api/auditLog')
 const content=require('./routes/api/content')
 
+const roles=require('./routes/api/roles') //new
+const SecurityLevel=require('./routes/api/securityLevel') //new
+const emailTemplate=require('./routes/api/emailTemplate') //new
+const customField=require('./routes/api/customField') //new
+
+
+
 const apiInit=require('./routes/api/apiInit')
 const apiList=require('./routes/api/apiList')
 const apiClear=require('./routes/api/apiClear')
@@ -98,6 +105,13 @@ app.use('/api/batchLoad', batchLoad)
 app.use('/api/batchLog', batchLog)
 app.use('/api/auditLog', auditLog)
 app.use('/api/content', content)
+
+app.use('/api/roles', roles) //new
+app.use('/api/SecurityLevel', SecurityLevel) //new
+app.use('/api/emailTemplate', emailTemplate) //new
+app.use('/api/customField', customField) //new
+
+
 app.use('/api/apiInit', apiInit)
 app.use('/api/apiList', apiList)
 app.use('/api/apiClear', apiClear)
